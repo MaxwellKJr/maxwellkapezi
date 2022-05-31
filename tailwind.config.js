@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        baskerville: ["Libre Baskerville"],
       },
     },
   },
