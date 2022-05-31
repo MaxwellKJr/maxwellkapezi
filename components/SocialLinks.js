@@ -32,17 +32,20 @@ const SocialLinks = () => {
   ];
 
   return (
-    <ul className="flex justify-center items-center w-full mx-auto mt-4 md:mt-0">
+    <ul className="flex mt-4 md:mt-0">
       {socialLinks.map((socialLink) => {
         return (
           <li key={socialLink.id}>
             <a
               href={socialLink.linkAddress}
-              className="p-4  text-white"
+              className="py-4 text-white"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={socialLink.linkName} className="h-6" />
+              <FontAwesomeIcon
+                icon={socialLink.linkName}
+                className="h-6 px-4"
+              />
             </a>
           </li>
         );
