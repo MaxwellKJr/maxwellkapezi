@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
+  faTiktok,
   faTwitter,
-  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
 const SocialLinks = () => {
@@ -12,22 +12,22 @@ const SocialLinks = () => {
     {
       id: 1,
       linkName: faFacebook,
-      linkAddress: "https://web.facebook.com/maxwellkapezijr/",
+      linkAddress: "https://web.facebook.com/malawianwriter/",
     },
     {
       id: 2,
       linkName: faTwitter,
-      linkAddress: "https://twitter.com/maxwellKJr/",
+      linkAddress: "https://twitter.com/malawianwriter/",
     },
     {
       id: 3,
       linkName: faInstagram,
-      linkAddress: "https://instagram.com/_maxwellkjr/",
+      linkAddress: "https://instagram.com/malawianwriter/",
     },
     {
       id: 4,
-      linkName: faWhatsapp,
-      linkAddress: "https://wa.me/265992800255/",
+      linkName: faTiktok,
+      linkAddress: "https://www.tiktok.com/@malawianwriter/",
     },
   ];
 
