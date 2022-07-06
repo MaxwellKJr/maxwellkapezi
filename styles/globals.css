@@ -11,5 +11,6 @@
 
   a:hover {
     color: #00ffa5;
+    font-weight: semibold;
   }
 }
