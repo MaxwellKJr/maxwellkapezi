@@ -8,4 +8,8 @@
   html {
     font-family: Poppins;
   }
+
+  a:hover {
+    color: #00ffa5;
+  }
 }

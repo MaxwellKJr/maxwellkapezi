@@ -10,7 +10,7 @@ const Header = () => {
           <ul className="flex flex-row items-center">
             <li>
               <Link href="/">
-                <a className="uppercase text-xs pl-0 p-4">Home</a>
+                <a className="uppercase text-xs ml-0 p-4">Home</a>
               </Link>
             </li>
             <li>
