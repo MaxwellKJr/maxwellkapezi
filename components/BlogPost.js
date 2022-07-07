@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const BlogPost = () => {
   return (
-    <div className="">
+    <div className="rounded bg-black backdrop-blur bg-opacity-50 p-4 text-white hover:scale-105 transition ease-in-out">
       <Link href="/">
         <a>
-          <h3 className="text-2xl">Maybe Tomorrow</h3>
+          <h3 className="text-2xl font-baskerville">Maybe Tomorrow</h3>
         </a>
       </Link>
-      <p className="py-4 font-baskerville text-sm">
+      <p className="py-4 text-sm">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque,
         ipsa. Ab quod ad quia necessitatibus!
       </p>
@@ -17,8 +17,8 @@ const BlogPost = () => {
         <a className="text-[#00FFA5]">Read More...</a>
       </Link>
       <br />
-      <small>6th July, 2022</small>
       <hr className="my-2 opacity-30" />
+      <small>6th July, 2022</small>
     </div>
   );
 };
