@@ -3,9 +3,9 @@ import BlogPosts from "../components/BlogPosts";
 
 const Blog = () => {
   return (
-    <div>
+    <>
       <BlogPosts />
-    </div>
+    </>
   );
 };
 
