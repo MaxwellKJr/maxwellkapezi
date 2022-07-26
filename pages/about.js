@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutHero from "../components/AboutHero";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AboutHero />
+      <Footer />
     </>
   );
 };

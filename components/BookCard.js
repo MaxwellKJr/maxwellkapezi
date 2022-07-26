@@ -12,7 +12,7 @@ const BookCard = () => {
       </Link>
       <Link href="/">
         <a>
-          <h3 className="text-2xl font-baskerville">
+          <h3 className="text-2xl font-poppins font-black">
             The Man in Me: A Poetic Story
           </h3>
         </a>

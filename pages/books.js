@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BooksCards from "../components/BookCards";
+import Footer from "../components/Footer";
 
 const Books = () => {
   return (
@@ -15,6 +16,7 @@ const Books = () => {
       <main>
         <BooksCards />
       </main>
+      <Footer />
     </>
   );
 };

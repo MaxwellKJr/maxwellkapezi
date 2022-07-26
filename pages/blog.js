@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BlogPosts from "../components/BlogPosts";
+import Footer from "../components/Footer";
 
 const Blog = () => {
   return (
@@ -13,6 +14,7 @@ const Blog = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BlogPosts />
+      <Footer />
     </>
   );
 };
