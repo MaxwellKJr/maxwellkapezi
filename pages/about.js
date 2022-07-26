@@ -12,7 +12,7 @@ const About = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AboutHero />;
+      <AboutHero />
     </>
   );
 };

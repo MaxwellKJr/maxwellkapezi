@@ -5,12 +5,29 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary-color: #00ffa5;
+    --primary-dark: #0c1519;
+  }
+
   html {
     font-family: Poppins;
   }
 
   a:hover {
-    color: #00ffa5;
+    color: var(--primary-color);
     font-weight: semibold;
+  }
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track {
+    background: var(--primary-dark) !important;
+    width: 12px !important;
+    transition: all 400ms ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color) !important;
+    border-radius: 20px !important;
   }
 }
