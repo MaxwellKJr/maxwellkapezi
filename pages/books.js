@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BooksCards from "../components/BookCards";
 
 const Books = () => {
   return (
@@ -11,7 +12,9 @@ const Books = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>Books</main>
+      <main>
+        <BooksCards />
+      </main>
     </>
   );
 };
