@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="flex flex-col w-full h-screen m-auto text-black bg-center bg-cover bg-hero-img">
       <div className="bg-black bg-opacity-30 w-full h-full">
         <div className="flex flex-row items-center w-full h-full px-4 mx-auto md:px-0 md:w-3/4 justify-items-start">
-          <div className="p-4 bg-black text-gray-200 rounded backdrop-blur-lg bg-opacity-50 md:w-1/2">
+          <div className="p-4 bg-black text-gray-200 mt-20 md:mt-0 rounded backdrop-blur-lg bg-opacity-50 md:w-1/2">
             <h1 className="text-2xl mb-4 md:text-4xl text-white font-black font-baskerville">
               <em>Greetings!</em>
             </h1>

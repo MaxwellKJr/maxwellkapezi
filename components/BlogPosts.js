@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import BlogPost from "./BlogPost";
 
-const BlogPosts = () => {
+const BlogPosts = ({ posts }) => {
   return (
     <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-black ">
       <div className="w-full h-full">
@@ -14,11 +14,10 @@ const BlogPosts = () => {
           <div className="">
             {/* blog posts */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-4 my-2 font-poppins">
-              <BlogPost />
-              <BlogPost />
-              <BlogPost />
-              <BlogPost />
-              <BlogPost />
+              {posts &&
+                posts.data.map((post) => {
+                  return <BlogPost key={post.id} post={post} />;
+                })}
             </div>
           </div>
         </div>
