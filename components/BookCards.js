@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { fetcher } from "../lib/api";
 import BookCard from "./BookCard";
 
-const BooksCards = () => {
+const BooksCards = ({ books }) => {
   return (
     <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-black ">
       <div className="w-full h-full">
@@ -13,9 +14,10 @@ const BooksCards = () => {
           <div className="">
             {/* blog posts */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-4 my-2 font-poppins">
-              <BookCard />
-              <BookCard />
-              <BookCard />
+              {books &&
+                books.data.map((book) => {
+                  return <BookCard key={book.id} book={book} />;
+                })}
             </div>
           </div>
         </div>
