@@ -11,8 +11,6 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/books?_sort=publishedOn:DESC&populate=bookCover`
   );
 
-  console.log(booksResponse);
-
   return {
     props: {
       books: booksResponse,
