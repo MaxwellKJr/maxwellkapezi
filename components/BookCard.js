@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import bookImage from "../public/img/The Man in Me.jpg";
 import Moment from "react-moment";
-import { fetcher } from "../lib/api";
 
 const BookCard = ({ book }) => {
   const { bookName, slug, publishedOn, bookCover } = book;

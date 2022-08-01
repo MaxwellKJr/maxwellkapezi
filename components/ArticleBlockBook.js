@@ -14,9 +14,9 @@ const ArticleBlockBook = ({ book }) => {
   } = book;
   console.log(bookCover.formats.medium.url);
   return (
-    <div className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-5xl">
+    <div className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-screen-lg">
       <div className="flex flex-col justify-start items-center lg:justify-between lg:items-start lg:flex-row">
-        <div className="pr-4 w-7/12 text-center lg:text-left">
+        <div className="pr-4 md:w-7/12 text-center lg:text-left">
           {/* Book Meta Data */}
           <Image
             src={`http://localhost:1337${bookCover.formats.large.url}`}

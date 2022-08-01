@@ -49,7 +49,7 @@ const Post = ({ post, otherPosts }) => {
         <meta name="description" content={description} />
       </Head>
 
-      <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-white pt-20 lg:pt-16">
+      <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-white pt-20 lg:pt-16 max-w-screen-lg">
         <div className="w-full h-full">
           <div className="w-full px-5 pb-20 pt-40 sm:pt-24 md:px-0 h-full flex flex-col justify-center items-center">
             {/* <h2 className="text-2xl mb-4 md:text-4xl text-white font-poppins font-semibold text-center uppercase">

@@ -38,7 +38,7 @@ const Hero = () => {
 
             {/* ctas */}
             <Link href="/">
-              <a className="bg-[#00FFA5] text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-flex flex-row items-center justify-center py-4">
+              <a className="bg-[#00FFA5] text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-block md:inline-flex flex-row items-center justify-center py-4">
                 <em>{"Download Maybe Tomorrow (Complete Edition)"}</em>
                 <FontAwesomeIcon
                   icon={faDownload}
