@@ -3,30 +3,49 @@ import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
 
 const ArticleBlockBook = ({ book }) => {
-  const { bookName, description, publishedOn, price, bookCover } = book;
+  const {
+    bookName,
+    bookCover,
+    description,
+    publishedOn,
+    price,
+    pages,
+    isPublished,
+  } = book;
   console.log(bookCover.formats.medium.url);
   return (
-    <article className="w-full px-4 sm:w-3/4 lg:w-2/5 mx-auto">
-      <small className="text-md">
-        Published On: <Moment format="MMMM DD, YYYY">{publishedOn}</Moment>
-      </small>
-      <div className="flex flex-col lg:flex-row">
-        <div className="pr-4 w-1/4">
+    <div className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-5xl">
+      <div className="flex flex-col justify-start items-center lg:justify-between lg:items-start lg:flex-row">
+        <div className="pr-4 w-7/12 text-center lg:text-left">
           {/* Book Meta Data */}
           <Image
-            src={`http://localhost:1337${bookCover.formats.medium.url}`}
+            src={`http://localhost:1337${bookCover.formats.large.url}`}
             alt={bookCover.alternativeText}
             width={bookCover.formats.large.width}
             height={bookCover.formats.large.height}
             blurDataURL
+            placeholder="blur"
           />
-          <p className="font-bold text-lg">Price: {`K${price}`}</p>
+          <ul>
+            <li className="text-md mb-2">
+              Published on:{" "}
+              <Moment format="MMMM DD, YYYY">{publishedOn}</Moment>
+            </li>
+            <li className="text-md mb-2">Pages: {pages}</li>
+            <li className="text-md mb-2">Available: {`Yes`}</li>
+            <li className="text-[#003120] font-bold text-xl md:text-3xl my-2 py-2 px-4 bg-[#00FFA5] inline-block">
+              Price: {`K${price}`}
+            </li>
+          </ul>
         </div>
-        <article className="w-3/4">
+        <article className="w-full my-8 lg:mt-0">
+          <h2 className="text-2xl mb-4 md:text-4xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
+            {bookName}
+          </h2>
           <p className="">{description}</p>
         </article>
       </div>
-    </article>
+    </div>
   );
 };
 
