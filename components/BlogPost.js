@@ -20,7 +20,7 @@ const BlogPost = ({ post }) => {
       <br />
       <hr className="my-2 opacity-30" />
       <small>
-        <Moment format="MMM dd, YYYY">{postedOn}</Moment>
+        <Moment format="dddd, MMMM DD, YYYY">{postedOn}</Moment>
       </small>
     </div>
   );
