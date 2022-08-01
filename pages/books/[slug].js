@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
   // If the route is like /posts/1, then params.id is 1
   const bookPath = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/books?filters[slug][$eq]=${slug}`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/books?filters[slug][$eq]=${slug}&populate=bookCover`
   );
 
   const otherBooks = await fetcher(
@@ -49,7 +49,7 @@ const Book = ({ book }) => {
         <meta name="description" content={description} />
       </Head>
 
-      <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-white pt-20 lg:pt-16">
+      <main className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-white pt-20 lg:pt-16">
         <div className="w-full h-full">
           <div className="w-full px-5 pb-20 pt-40 sm:pt-24 md:px-0 h-full flex flex-col justify-center items-center">
             <h2 className="text-2xl mb-4 md:text-4xl text-white font-poppins font-semibold text-center uppercase">
@@ -63,7 +63,8 @@ const Book = ({ book }) => {
             </div>
           </div>
         </div>
-      </section>
+      </main>
+
       <Footer />
     </>
   );
