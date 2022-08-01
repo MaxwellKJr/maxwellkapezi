@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
   // Get the paths we want to pre-render based on posts
   const paths = blogPostsResponse.data.map((post) => ({
-    params: { slug: post.attributes.slug },
+    params: { slug: post.slug },
   }));
 
   // We'll pre-render only these paths at build time.
@@ -23,20 +23,19 @@ export async function getStaticPaths() {
 // This also gets called at build time
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
-  const { slug } = params;
+  const { slug, id } = params;
 
   // If the route is like /posts/1, then params.id is 1
   const blogPosts = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?slug=${slug}`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?filters[slug][$eq]=${slug}`
   );
 
   // Pass post data to the page via props
-  return { props: { post: blogPosts.data[0].attributes } };
+  return { props: { post: blogPosts.data[0] } };
 }
 
 const Post = ({ post }) => {
-  const { title, description, body, postedOn, slug } = post;
-
+  const { title, description, slug } = post;
   return (
     <>
       <Head>

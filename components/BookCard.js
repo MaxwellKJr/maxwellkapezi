@@ -4,7 +4,7 @@ import bookImage from "../public/img/The Man in Me.jpg";
 import Moment from "react-moment";
 
 const BookCard = ({ book }) => {
-  const { bookName, slug, bookCover, publishedOn } = book.attributes;
+  const { bookName, slug, bookCover, publishedOn } = book;
   // const { bookCover } = book.attributes.data;
 
   return (

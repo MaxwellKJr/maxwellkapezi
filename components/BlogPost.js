@@ -3,7 +3,7 @@ import Link from "next/link";
 import Moment from "react-moment";
 
 const BlogPost = ({ post }) => {
-  const { title, description, slug, postedOn } = post.attributes;
+  const { title, description, slug, postedOn } = post;
 
   return (
     <div className="rounded bg-black backdrop-blur bg-opacity-50 p-4 text-white hover:shadow-lg hover:scale-105 transition ease-in-out mb-4 hover:cursor-default">
