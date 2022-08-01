@@ -10,22 +10,30 @@ const Header = () => {
           <ul className="flex flex-row items-center">
             <li>
               <Link href="/">
-                <a className="uppercase text-xs ml-0 p-4">Home</a>
+                <a className="uppercase text-xs ml-0 p-4" title="Home">
+                  Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a className="uppercase text-xs p-4">Blog</a>
+                <a className="uppercase text-xs p-4" title="Blog">
+                  On Writing
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/books">
-                <a className="uppercase text-xs p-4">Books</a>
+                <a className="uppercase text-xs p-4" title="What to read">
+                  Books
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a className="uppercase text-xs p-4">About</a>
+                <a className="uppercase text-xs p-4" title="Know the author">
+                  About
+                </a>
               </Link>
             </li>
           </ul>
