@@ -17,7 +17,7 @@ const Hero = () => {
               <p className="mb-3 text-md">
                 Welcome to the <span>official</span> website for{" "}
                 <Link href="/about">
-                  <a className="text-[#00FFA5] hover:underline font-semibold">
+                  <a className="text-primary hover:underline font-semibold">
                     Maxwell Kapezi
                   </a>
                 </Link>
@@ -28,7 +28,7 @@ const Hero = () => {
               <p className="mb-3 text-md">
                 You can start by checking out his{" "}
                 <Link href="/books">
-                  <a className="text-[#00FFA5] hover:underline font-semibold">
+                  <a className="text-primary hover:underline font-semibold">
                     recent work here
                   </a>
                 </Link>
@@ -38,7 +38,7 @@ const Hero = () => {
 
             {/* ctas */}
             <Link href="/">
-              <a className="bg-[#00FFA5] text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-block md:inline-flex flex-row items-center justify-center py-4">
+              <a className="bg-primary text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-block md:inline-flex flex-row items-center justify-center py-4">
                 <em>{"Download Maybe Tomorrow (Complete Edition)"}</em>
                 <FontAwesomeIcon
                   icon={faDownload}

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#00FFA5",
+      },
       backgroundImage: {
         "hero-img": "url('/img/maxwell.jpg')",
       },

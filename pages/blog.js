@@ -8,7 +8,7 @@ export async function getStaticProps() {
 
   const postsResponse = await fetcher(
     //order the books by published date in descending order
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?_sort=postedOn:DESC`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?fields=title,slug,description,tag,postedOn&sort=postedOn:DESC&populate=featuredImage`
   );
 
   return {
