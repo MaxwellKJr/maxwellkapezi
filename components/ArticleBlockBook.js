@@ -12,7 +12,7 @@ const ArticleBlockBook = ({ book }) => {
     pages,
     isPublished,
   } = book;
-  console.log(bookCover.formats.medium.url);
+
   return (
     <div className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-screen-lg">
       <div className="flex flex-col justify-start items-center lg:justify-between lg:items-start lg:flex-row">

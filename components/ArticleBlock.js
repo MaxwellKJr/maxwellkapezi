@@ -8,7 +8,7 @@ const ArticleBlock = ({ post }) => {
 
   return (
     <article className="prose dark:prose-invert lg:prose-base w-full px-4 sm:w-3/4 md:prose-w-2/5 mx-auto">
-      <small className="text-md">
+      <small className="text-md p-2 pl-0">
         Posted On: <Moment format="MMMM DD, YYYY">{postedOn}</Moment>
       </small>
       <ReactMarkdown>{markdown}</ReactMarkdown>

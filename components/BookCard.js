@@ -5,7 +5,6 @@ import Moment from "react-moment";
 const BookCard = ({ book }) => {
   const { bookName, slug, publishedOn, bookCover } = book;
 
-  console.log(bookCover);
   return (
     <div className="rounded bg-black bg-opacity-50 p-4 text-white hover:shadow-lg lg:hover:scale-105 transition ease-in-out mb-4 hover:cursor-default">
       <Link href={`/books/${slug}`}>
