@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
   // If the route is like /posts/1, then params.id is 1
   const blogPost = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?filters[slug][$eq]=${slug}`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogPosts?filters[slug][$eq]=${slug}&populate=featuredImage`
   );
 
   const otherPosts = await fetcher(
