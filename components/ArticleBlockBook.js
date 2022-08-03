@@ -33,7 +33,7 @@ const ArticleBlockBook = ({ book }) => {
             </li>
             <li className="text-md mb-2">Pages: {pages}</li>
             <li className="text-md mb-2">Available: {`Yes`}</li>
-            <li className="text-[#003120] font-bold text-xl md:text-3xl my-2 py-2 px-4 bg-primary inline-block">
+            <li className="text-secondary font-bold text-xl md:text-3xl my-2 py-2 px-4 bg-primary inline-block">
               Price: {`K${price}`}
             </li>
           </ul>

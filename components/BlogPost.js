@@ -7,7 +7,7 @@ const BlogPost = ({ post }) => {
   const { title, description, slug, featuredImage, tag, postedOn } = post;
 
   return (
-    <div className="rounded-lg relative bg-black bg-opacity-50 p-4 text-white shadow-md shadow-[#003120] lg:hover:scale-105 transition ease-in-out mb-8 hover:cursor-default">
+    <div className="rounded-lg relative bg-black bg-opacity-50 p-4 text-white shadow-md shadow-secondary lg:hover:scale-105 transition ease-in-out mb-8 hover:cursor-default">
       <Link href={`/blog/${slug}`}>
         <a>
           <Image

@@ -1,4 +1,5 @@
 import React from "react";
+import Breadcrumbs from "nextjs-breadcrumbs";
 import Head from "next/head";
 import { fetcher } from "../../lib/api";
 import ArticleBlock from "../../components/ArticleBlock";
@@ -49,13 +50,21 @@ const Post = ({ post, otherPosts }) => {
         <meta name="description" content={description} />
       </Head>
 
-      <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-white pt-20 lg:pt-16 max-w-screen-lg">
+      <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-secondary text-white pt-20 lg:pt-16 max-w-screen-lg">
         <div className="w-full h-full">
           <div className="w-full pb-20 pt-40 sm:pt-24 md:px-0 h-full flex flex-col justify-center items-center">
+            {/* <div className="">
+              <Breadcrumbs
+                useDefaultStyle={true}
+                rootLabel="Home"
+                labelsToUppercase={true}
+                containerClassName="bg-primary mb-4 text-sm hidden"
+                listClassName="text-sm"
+              />
+            </div> */}
             {/* <h2 className="text-2xl mb-4 md:text-4xl text-white font-poppins font-semibold text-center uppercase">
               {title}
             </h2> */}
-
             <div className="flex flex-col lg:flex-row justify-center items-start lg:justify-start lg:items-start">
               {/* blog posts */}
 

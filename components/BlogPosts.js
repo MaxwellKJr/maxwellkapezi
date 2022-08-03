@@ -4,7 +4,7 @@ import BlogPost from "./BlogPost";
 
 const BlogPosts = ({ posts }) => {
   return (
-    <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-[#003120] text-black max-w-screen-xl">
+    <section className="flex flex-col w-full m-auto bg-gradient-to-bl from-gray-800 to-secondary text-black max-w-screen-xl">
       <div className="w-full h-full">
         <div className="w-full px-5 pb-20 pt-40 sm:pt-24 md:px-0 md:w-3/4 h-full flex flex-col justify-center items-center mx-auto">
           <h1 className="text-2xl mb-4 md:text-4xl text-white font-black font-baskerville text-center uppercase">
