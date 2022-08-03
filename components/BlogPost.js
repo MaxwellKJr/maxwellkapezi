@@ -13,7 +13,7 @@ const BlogPost = ({ post }) => {
   const { title, description, slug, featuredImage, tag, postedOn } = post;
 
   return (
-    <motion.div className="rounded-md relative bg-black bg-opacity-50 text-white lg:hover:scale-95 transition-all ease-in-out mb-10 hover:cursor-default">
+    <motion.div className="rounded-md relative bg-black bg-opacity-50 text-white lg:hover:scale-95 transition-all ease-in-out mb-16 hover:cursor-default">
       <Link href={`/blog/${slug}`}>
         <a>
           <Image
@@ -38,7 +38,7 @@ const BlogPost = ({ post }) => {
         <small className="bg-black bg-opacity-75 inline-block px-2 rounded-lg text-primary text-xs">
           {tag}
         </small>
-        <hr className="my-2 opacity-75" />
+        <hr className="my-2 opacity-50" />
         <small className="mb-8 inline-block">
           <Moment format="dddd, MMMM DD, YYYY">{postedOn}</Moment>
         </small>

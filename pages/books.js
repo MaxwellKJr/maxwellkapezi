@@ -30,7 +30,7 @@ const Books = ({ books }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="pt-20">
         <BooksCards books={books} />
       </main>
     </>

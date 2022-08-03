@@ -29,7 +29,9 @@ const Blog = ({ posts }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BlogPosts posts={posts} />
+      <main className="pt-20">
+        <BlogPosts posts={posts} />
+      </main>
     </>
   );
 };
