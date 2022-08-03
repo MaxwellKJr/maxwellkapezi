@@ -1,6 +1,18 @@
 import Link from "next/link";
 import { fetcher } from "../lib/api";
 import BookCard from "./BookCard";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      type: "tween",
+    },
+  },
+};
 
 const BooksCards = ({ books }) => {
   return (
@@ -13,12 +25,17 @@ const BooksCards = ({ books }) => {
 
           <div className="">
             {/* blog posts */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-4 my-2 font-poppins">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-4 my-4 font-poppins"
+            >
               {books &&
                 books.data.map((book) => {
                   return <BookCard key={book.id} book={book} />;
                 })}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const ArticleBlockBook = ({ book }) => {
   const {
@@ -14,7 +21,14 @@ const ArticleBlockBook = ({ book }) => {
   } = book;
 
   return (
-    <div className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-screen-lg">
+    <motion.div
+      variants={variants}
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      transition={{ delay: 0.3, type: "tween" }}
+      className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-screen-lg"
+    >
       <div className="flex flex-col justify-start items-center lg:justify-between lg:items-start lg:flex-row">
         <div className="pr-4 md:w-7/12 text-center lg:text-left">
           {/* Book Meta Data */}
@@ -45,7 +59,7 @@ const ArticleBlockBook = ({ book }) => {
           <p className="">{description}</p>
         </article>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

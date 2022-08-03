@@ -2,13 +2,27 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const Hero = () => {
   return (
     <section className="flex flex-col w-full h-screen m-auto text-black bg-center bg-cover bg-hero-img">
       <div className="bg-black bg-opacity-30 w-full h-full">
         <div className="flex flex-row items-center w-full h-full px-4 mx-auto md:px-0 md:w-3/4 justify-items-start">
-          <div className="p-4 bg-black text-gray-200 mt-20 md:mt-0 rounded backdrop-blur-lg bg-opacity-50 md:w-1/2">
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            transition={{ delay: 0.3, type: "tween" }}
+            className="p-4 bg-black text-gray-200 mt-20 md:mt-0 rounded backdrop-blur-lg bg-opacity-50 md:w-1/2"
+          >
             <h1 className="text-2xl mb-4 md:text-4xl text-white font-black font-baskerville">
               <em>Greetings!</em>
             </h1>
@@ -46,7 +60,7 @@ const Hero = () => {
                 />
               </a>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

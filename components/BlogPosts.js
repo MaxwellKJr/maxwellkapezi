@@ -1,6 +1,18 @@
 import Link from "next/link";
 import React from "react";
 import BlogPost from "./BlogPost";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      type: "tween",
+    },
+  },
+};
 
 const BlogPosts = ({ posts }) => {
   return (
@@ -13,12 +25,17 @@ const BlogPosts = ({ posts }) => {
 
           <div className="">
             {/* blog posts */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-4 my-2 font-poppins">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-8 my-4 font-poppins"
+            >
               {posts &&
                 posts.data.map((post) => {
                   return <BlogPost key={post.id} post={post} />;
                 })}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
