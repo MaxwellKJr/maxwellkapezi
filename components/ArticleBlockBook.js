@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
@@ -13,12 +14,17 @@ const ArticleBlockBook = ({ book }) => {
   const {
     bookName,
     bookCover,
+    bookPDF,
     description,
+    summary,
     publishedOn,
     price,
     pages,
-    isPublished,
   } = book;
+
+  const markdown = description;
+
+  const finalPrice = price === null ? `Free` : `Buy: K${price}`;
 
   return (
     <motion.div
@@ -30,7 +36,7 @@ const ArticleBlockBook = ({ book }) => {
       className="w-full px-4 sm:w-3/4 lg:w-3/4 mx-auto max-w-screen-lg"
     >
       <div className="flex flex-col justify-start items-center lg:justify-between lg:items-start lg:flex-row">
-        <div className="pr-4 md:w-7/12 text-center lg:text-left">
+        <div className="rounded-lg bg-black bg-opacity-50 p-4 lg:pr-4 md:w-7/12 text-center lg:text-left">
           {/* Book Meta Data */}
           <Image
             src={`http://localhost:1337${bookCover.formats.large.url}`}
@@ -40,23 +46,35 @@ const ArticleBlockBook = ({ book }) => {
             blurDataURL
             placeholder="blur"
           />
+          <h3 className="text-xl mt-4 font-black block lg:hidden mb-4 md:text-xl text-white font-poppins text-center lg:text-left uppercase">
+            {bookName}
+          </h3>
           <ul>
-            <li className="text-md mb-2">
+            <li className="text-sm mb-1 text-zinc-200">
               Published on:{" "}
               <Moment format="MMMM DD, YYYY">{publishedOn}</Moment>
             </li>
-            <li className="text-md mb-2">Pages: {pages}</li>
-            <li className="text-md mb-2">Available: {`Yes`}</li>
-            <li className="text-secondary font-bold text-xl md:text-3xl my-2 py-2 px-4 bg-primary inline-block">
-              Price: {`K${price}`}
+            <li className="text-sm mb-1 text-zinc-200">Pages: {pages}</li>
+            <li className="text-sm mb-1 text-zinc-200">Available: {`Yes`}</li>
+            <li className="rounded inline-flex text-secondary font-bold text-xl md:text-3xl my-2 py-2 px-4 bg-primary md:w-full md:inline-block md:text-center">
+              {finalPrice}
+            </li>
+            <li>
+              <a
+                href={`http://localhost:1337${bookPDF.url}`}
+                download={bookPDF.name}
+              ></a>
             </li>
           </ul>
         </div>
-        <article className="w-full my-8 lg:mt-0 lg:pl-4">
-          <h2 className="text-2xl mb-4 md:text-3xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
+        <article className="prose dark:prose-invert lg:prose-base w-full my-8 lg:mt-0 lg:pl-8">
+          <h2 className="text-2xl hidden lg:block mb-4 md:text-3xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
             {bookName}
           </h2>
-          <p className="">{description}</p>
+          <p className="font">
+            <em>{summary}</em>
+          </p>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
         </article>
       </div>
     </motion.div>

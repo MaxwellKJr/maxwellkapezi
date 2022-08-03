@@ -1,5 +1,4 @@
 import React from "react";
-import Breadcrumbs from "nextjs-breadcrumbs";
 import Head from "next/head";
 import { fetcher } from "../../lib/api";
 import ArticleBlock from "../../components/ArticleBlock";

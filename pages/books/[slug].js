@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
   // If the route is like /posts/1, then params.id is 1
   const bookPath = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/books?filters[slug][$eq]=${slug}&populate=bookCover`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/books?filters[slug][$eq]=${slug}&populate=bookCover,bookPDF`
   );
 
   const otherBooks = await fetcher(
@@ -42,6 +42,7 @@ export async function getStaticProps({ params }) {
 
 const Book = ({ book }) => {
   const { bookName, description, slug } = book;
+
   return (
     <>
       <Head>
