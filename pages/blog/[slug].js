@@ -76,7 +76,6 @@ const Post = ({ post, otherPosts }) => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

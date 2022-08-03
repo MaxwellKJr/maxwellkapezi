@@ -1,5 +1,6 @@
 // import "nextjs-breadcrumbs/dist/index.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../styles/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,11 +22,12 @@ function MyApp({ Component, pageProps }) {
           exit="exit" // Exit state (used later) to variants.exit
           transition={{ type: "linear" }} // Set the transition to linear
           exitBeforeEnter
-          className=""
+          className="content flex-1"
         >
           <Component {...pageProps} />
         </motion.main>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }

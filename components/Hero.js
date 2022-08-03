@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col w-full h-screen m-auto text-black bg-center bg-cover bg-hero-img">
       <div className="bg-black bg-opacity-30 w-full h-full">
-        <div className="flex flex-row items-center w-full h-full px-4 mx-auto md:px-0 md:w-3/4 justify-items-start">
+        <div className="flex flex-row items-center w-full h-full px-4 mx-auto md:px-0 md:w-3/4 justify-items-start max-w-screen-lg">
           <motion.div
             variants={variants}
             initial="hidden"

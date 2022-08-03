@@ -30,7 +30,6 @@ const Blog = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BlogPosts posts={posts} />
-      <Footer />
     </>
   );
 };

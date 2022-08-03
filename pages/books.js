@@ -33,7 +33,6 @@ const Books = ({ books }) => {
       <main>
         <BooksCards books={books} />
       </main>
-      <Footer />
     </>
   );
 };

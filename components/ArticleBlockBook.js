@@ -52,8 +52,8 @@ const ArticleBlockBook = ({ book }) => {
             </li>
           </ul>
         </div>
-        <article className="w-full my-8 lg:mt-0">
-          <h2 className="text-2xl mb-4 md:text-4xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
+        <article className="w-full my-8 lg:mt-0 lg:pl-4">
+          <h2 className="text-2xl mb-4 md:text-3xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
             {bookName}
           </h2>
           <p className="">{description}</p>

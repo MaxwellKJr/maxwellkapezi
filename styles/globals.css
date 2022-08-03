@@ -10,8 +10,19 @@
     --primary-dark: #0c1519;
   }
 
-  html {
+  html,
+  body {
     font-family: Poppins;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1 0 auto;
   }
 
   a:hover {
@@ -29,5 +40,10 @@
   ::-webkit-scrollbar-thumb {
     background: var(--primary-color) !important;
     border-radius: 20px !important;
+  }
+
+  blockquote {
+    opacity: 0.75;
+    border-left: 0.5rem solid var(--primary-color) !important;
   }
 }
