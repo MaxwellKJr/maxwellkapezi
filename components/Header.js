@@ -49,7 +49,7 @@ const Header = () => {
                   }
                   title="Blog"
                 >
-                  On Writing
+                  Blog
                 </a>
               </Link>
             </li>

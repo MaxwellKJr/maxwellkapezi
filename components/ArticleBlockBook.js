@@ -74,7 +74,9 @@ const ArticleBlockBook = ({ book }) => {
           <p className="font">
             <em>{summary}</em>
           </p>
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <ReactMarkdown>
+            <div className="text-white">{markdown}</div>
+          </ReactMarkdown>
         </article>
       </div>
     </motion.div>
