@@ -39,7 +39,7 @@ const ArticleBlockBook = ({ book }) => {
         <div className="rounded-lg bg-black bg-opacity-50 p-4 lg:pr-4 md:w-7/12 text-center lg:text-left">
           {/* Book Meta Data */}
           <Image
-            src={`http://localhost:1337${bookCover.formats.large.url}`}
+            src={`https://murmuring-tor-19815.herokuapp.com${bookCover.formats.large.url}`}
             alt={bookCover.alternativeText}
             width={bookCover.formats.large.width}
             height={bookCover.formats.large.height}
@@ -61,7 +61,7 @@ const ArticleBlockBook = ({ book }) => {
             </li>
             <li>
               <a
-                href={`http://localhost:1337${bookPDF.url}`}
+                href={`https://murmuring-tor-19815.herokuapp.com${bookPDF.url}`}
                 download={bookPDF.name}
               ></a>
             </li>

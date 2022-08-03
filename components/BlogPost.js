@@ -17,7 +17,7 @@ const BlogPost = ({ post }) => {
       <Link href={`/blog/${slug}`}>
         <a>
           <Image
-            src={`http://localhost:1337${featuredImage.formats.small.url}`}
+            src={`https://murmuring-tor-19815.herokuapp.com${featuredImage.formats.small.url}`}
             alt={featuredImage.alternativeText}
             width={featuredImage.formats.small.width}
             height={featuredImage.formats.small.height}

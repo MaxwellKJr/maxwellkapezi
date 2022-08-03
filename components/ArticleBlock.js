@@ -24,7 +24,7 @@ const ArticleBlock = ({ post }) => {
       className="prose dark:prose-invert lg:prose-base w-full px-4 sm:w-3/4 md:prose-w-2/5 mx-auto"
     >
       <Image
-        src={`http://localhost:1337${featuredImage.formats.small.url}`}
+        src={`https://murmuring-tor-19815.herokuapp.com${featuredImage.formats.small.url}`}
         alt={featuredImage.alternativeText}
         width={featuredImage.formats.small.width}
         height={featuredImage.formats.small.height}
