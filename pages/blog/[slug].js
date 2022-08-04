@@ -15,12 +15,11 @@ export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
   const paths = blogPostsResponse.data.map((post) => ({
     params: { slug: post.slug },
-    revalidate: 60,
   }));
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 // This also gets called at build time

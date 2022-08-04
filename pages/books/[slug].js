@@ -15,7 +15,6 @@ export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
   const paths = booksResponse.data.map((book) => ({
     params: { slug: book.slug },
-    revalidate: 60,
   }));
 
   // We'll pre-render only these paths at build time.
