@@ -15,6 +15,7 @@ export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
   const paths = blogPostsResponse.data.map((post) => ({
     params: { slug: post.slug },
+    revalidate: 60,
   }));
 
   // We'll pre-render only these paths at build time.
@@ -37,7 +38,10 @@ export async function getStaticProps({ params }) {
   );
 
   // Pass post data to the page via props
-  return { props: { post: blogPost.data[0], otherPosts: otherPosts } };
+  return {
+    props: { post: blogPost.data[0], otherPosts: otherPosts },
+    revalidate: 60,
+  };
 }
 
 const Post = ({ post, otherPosts }) => {

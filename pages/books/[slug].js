@@ -15,6 +15,7 @@ export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
   const paths = booksResponse.data.map((book) => ({
     params: { slug: book.slug },
+    revalidate: 60,
   }));
 
   // We'll pre-render only these paths at build time.
@@ -37,7 +38,10 @@ export async function getStaticProps({ params }) {
   );
 
   // Pass post data to the page via props
-  return { props: { book: bookPath.data[0], otherBooks: otherBooks } };
+  return {
+    props: { book: bookPath.data[0], otherBooks: otherBooks },
+    revalidate: 60,
+  };
 }
 
 const Book = ({ book }) => {
