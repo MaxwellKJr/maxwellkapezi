@@ -35,9 +35,9 @@ const ArticleBlock = ({ post }) => {
       <small className="text-md p-2 pl-0">
         Posted On: <Moment format="MMMM DD, YYYY">{postedOn}</Moment>
       </small>
-      <ReactMarkdown>
-        <div className="text-white">{markdown}</div>
-      </ReactMarkdown>
+      <div className="text-white">
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
     </motion.article>
   );
 };

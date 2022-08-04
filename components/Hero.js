@@ -52,12 +52,12 @@ const Hero = () => {
 
             {/* ctas */}
             <Link href="/">
-              <a className="bg-primary text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-block md:inline-flex flex-row items-center justify-center py-4">
-                <em>{"Download Maybe Tomorrow (Complete Edition)"}</em>
-                <FontAwesomeIcon
+              <a className="bg-primary rounded-sm text-gray-900 hover:text-gray-800 font-semibold w-full text-center inline-block md:inline-flex flex-row items-center justify-center py-4">
+                <em>{"Maybe Tomorrow (Coming Soon)"}</em>
+                {/* <FontAwesomeIcon
                   icon={faDownload}
                   className="ml-4 h-5 hidden md:block"
-                />
+                /> */}
               </a>
             </Link>
           </motion.div>
