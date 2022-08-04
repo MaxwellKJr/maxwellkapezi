@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 // This also gets called at build time
@@ -37,10 +37,7 @@ export async function getStaticProps({ params }) {
   );
 
   // Pass post data to the page via props
-  return {
-    props: { post: blogPost.data[0], otherPosts: otherPosts },
-    revalidate: 60,
-  };
+  return { props: { post: blogPost.data[0], otherPosts: otherPosts } };
 }
 
 const Post = ({ post, otherPosts }) => {

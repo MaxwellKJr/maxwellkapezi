@@ -37,10 +37,7 @@ export async function getStaticProps({ params }) {
   );
 
   // Pass post data to the page via props
-  return {
-    props: { book: bookPath.data[0], otherBooks: otherBooks },
-    revalidate: 60,
-  };
+  return { props: { book: bookPath.data[0], otherBooks: otherBooks } };
 }
 
 const Book = ({ book }) => {

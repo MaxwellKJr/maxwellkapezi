@@ -10,7 +10,7 @@ const BookCard = ({ book }) => {
       <Link href={`/books/${slug}`}>
         <a>
           <Image
-            src={`https://murmuring-tor-19815.herokuapp.com${bookCover.formats.small.url}`}
+            src={`${process.env.STRAPI_URL}${bookCover.formats.small.url}`}
             alt="The Man in Me thumbnail"
             placeholder="blur"
             className="w-full"
