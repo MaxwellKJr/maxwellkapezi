@@ -32,7 +32,7 @@ const ArticleBlock = ({ post }) => {
         placeholder="blur"
       />
       <br />
-      <small className="text-md p-2 pl-0">
+      <small className="text-md text-gray-100 p-2 pl-0">
         Posted On: <Moment format="MMMM DD, YYYY">{postedOn}</Moment>
       </small>
       <div className="text-white">

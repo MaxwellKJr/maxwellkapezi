@@ -61,9 +61,18 @@
     opacity: 0.9;
   }
 
+  article p {
+    font-size: 14px;
+  }
+
   article ul li::marker,
   article ol li::marker {
     /* Change the color */ /* Also needed for space (tweak if needed) */
     color: var(--primary-color) !important;
+  }
+
+  article ul li,
+  article ol li {
+    font-size: 14px;
   }
 }

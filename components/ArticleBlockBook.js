@@ -71,7 +71,7 @@ const ArticleBlockBook = ({ book }) => {
           <h2 className="text-2xl hidden lg:block mb-4 md:text-3xl text-white font-poppins font-semibold text-center lg:text-left uppercase">
             {bookName}
           </h2>
-          <p className="font">
+          <p className="text-gray-100">
             <em>{summary}</em>
           </p>
           <div className="text-white">
