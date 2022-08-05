@@ -39,7 +39,7 @@ export async function getStaticProps({ params }) {
   // Pass post data to the page via props
   return {
     props: { post: blogPost.data[0], otherPosts: otherPosts },
-    revalidate: 30,
+    revalidate: 10,
   };
 }
 
