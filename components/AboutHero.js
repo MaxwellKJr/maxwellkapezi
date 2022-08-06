@@ -13,15 +13,14 @@ const AboutHero = () => {
             <div className="font-poppins">
               <p className="text-md mb-4">
                 Born and raised in the Warm Heart of Africa, Malawi, Maxwell
-                Kapezi
+                Kapezi grew up in a family of writers and readers.
               </p>
               <p className="text-md mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                But his love for the craft and books grew by 110% when he read
+                Harry Potter and The {"Sorcerer's"} Stone at William Murray
+                Secondary School.
               </p>
-              <p className="text-md mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                esse vel impedit earum natus.
-              </p>
+              <p className=""></p>
             </div>
           </div>
         </div>
